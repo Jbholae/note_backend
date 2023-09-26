@@ -101,7 +101,7 @@ func (cc BlogsController) UpdateBlogs(c *gin.Context) {
 
 func (cc BlogsController) DeleteBlog(c *gin.Context) {
 	blogId, _ := strconv.ParseInt(c.Param("id"), 10, 64)
-	err := cc.blogServices.DeleteBlog(blogId)
+	err := cc.blogServices.DeleteBlogs(blogId)
 
 	if err != nil {
 		cc.logger.Zap.Error("Error Deleting Blog", err.Error())
