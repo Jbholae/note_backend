@@ -33,6 +33,6 @@ func (c BlogServices) UpdateBlogs(Blog models.Blog) error {
 	return c.repository.UpdateBlogs(Blog)
 }
 
-func(c BlogServices) DeleteBlog(blogId int64)error{
+func (c BlogServices) DeleteBlogs(blogId int64) error {
 	return c.repository.DeleteBlog(blogId)
 }
